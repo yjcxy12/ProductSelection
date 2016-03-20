@@ -7,7 +7,7 @@
     "clean": "rm -rf ./dist",
     "lint": "node_modules/eslint/bin/eslint.js .",
     "pretest": "npm run lint",
-    "test": "_mocha tests/**/*-tests.js -r babel-core/register -r babel-polyfill",
+    "test": "_mocha tests --recursive -r babel-core/register -r babel-polyfill",
     "test:watch": "npm run test -- --watch",
     "build:dev": "webpack client/index.js --config webpack.config.develop.js --progress --colors",
     "build:min": "webpack client/index.js --config webpack.config.production.js --progress --colors",
